@@ -9,18 +9,21 @@ public class Testt {
 	private double a;
 	private double b;
 	private double c;
+	int choice;
 	@Test
    public void TestTestt() {
 		Calci cal=new App();
 		sc = new Scanner(System.in);
-		   System.out.println("Enter number 1 : ");
-		   a = sc.nextDouble();
-		   System.out.println("Enter number 2 : ");
-		   b=sc.nextDouble();
-		   System.out.println("1.Add\n 2.Subtract\n 3.Multiply\n 4.Division\n 5.Exit\n");
-		   System.out.println("Enter the choice : ");
-		   int choice=sc.nextInt();
+		cal.display();
+		   
 		   do{
+			   System.out.println("Enter number 1 : ");
+			   a = sc.nextDouble();
+			   System.out.println("Enter number 2 : ");
+			   b=sc.nextDouble();
+			   System.out.println("1.Add\n 2.Subtract\n 3.Multiply\n 4.Division\n 5.Exit\n");
+			   System.out.println("Enter the choice : ");
+			   choice=sc.nextInt();
 			   switch(choice) {
 			   	   case 1 : c=cal.add(a,b);
 			   		    	System.out.println("Sum of two numbers are :"+c);
@@ -34,7 +37,8 @@ public class Testt {
 			       case 4 : c=cal.div(a,b);
 			                System.out.println("Division of two numbers are :"+c);
 			                break;
-			       case 5 : System.exit(0);
+			       case 5 : System.out.println("Thank u for using simple calculator");
+			    	        System.exit(0);
 				            break;
 			       default : System.out.println("Invalid choice choosen\n Choose another number");
 			   }
